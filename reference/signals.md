@@ -23,4 +23,4 @@ Install: `go install github.com/grpc-ecosystem/grpc-health-probe@latest`. Run th
 | Fibre disk | > 80 % used | warn | [RB-04](../runbooks/RB-04-object-storage.md) |
 | Signer slow | `cometbft_privval_signing_latency_*` median > 10 ms, 10 min | warn | [RB-05](../runbooks/RB-05-remote-signer.md) if the signer is remote, otherwise host load |
 
-Fibre itself pushes metrics over OTLP/HTTP (`--otel-endpoint`, base URL only). The metric list and dashboards are in the upstream [Fibre server reference](https://github.com/celestiaorg/celestia-app/blob/v10.5.0/fibre/cmd/README.md).
+Fibre itself pushes metrics over OTLP/HTTP (`--otel-endpoint`, base URL only). The metric list and dashboards are in the upstream [Fibre server reference](https://github.com/celestiaorg/celestia-app/blob/v10.6.0/fibre/cmd/README.md).
