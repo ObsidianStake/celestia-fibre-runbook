@@ -21,7 +21,7 @@ We run `local` on a dedicated NVMe. This card is for when local disk runs out. T
    cp $FIBRE_HOME/config/server_config.toml{,.bak}
    ```
 
-2. In `server_config.toml`, set `storage_backend = "object"` and fill the `[object_storage]` section: endpoint, bucket, prefix, credentials. Key names are in the upstream reference ([`fibre/cmd/README.md`](https://github.com/celestiaorg/celestia-app/blob/v10.5.0/fibre/cmd/README.md)). Copy them from there, not from memory.
+2. In `server_config.toml`, set `storage_backend = "object"` and fill the `[object_storage]` section: endpoint, bucket, prefix, credentials. Key names are in the upstream reference ([`fibre/cmd/README.md`](https://github.com/celestiaorg/celestia-app/blob/v10.6.0/fibre/cmd/README.md)). Copy them from there, not from memory.
 
 3. Restart:
 

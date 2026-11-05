@@ -36,12 +36,12 @@ If your layout differs, the cards still apply, but RB-04 and RB-05 stop being op
 
 ## Versions
 
-Checked **2026-10-26** against [celestia-app releases](https://github.com/celestiaorg/celestia-app/releases) and the upstream [Fibre server reference](https://github.com/celestiaorg/celestia-app/blob/v10.5.0/fibre/cmd/README.md).
+Runbook release **`v10.6.0-r1`**, checked **2026-11-05** against [celestia-app releases](https://github.com/celestiaorg/celestia-app/releases) and the upstream [Fibre server reference](https://github.com/celestiaorg/celestia-app/blob/v10.6.0/fibre/cmd/README.md). Every upstream release gets a runbook release with the same version. What changed is in the [release log](CHANGELOG.md).
 
 | Network | Chain ID | celestia-app + fibre |
 |:--|:--|:--|
-| Mainnet | `celestia` | `v10.5.0` |
-| Mocha | `mocha-5` | `v10.5.0-mocha` |
+| Mainnet | `celestia` | `v10.6.0` · tagged 2026-11-05, not yet announced. Stay on `v10.5.0` until the Foundation notice |
+| Mocha | `mocha-5` | `v10.6.0-mocha` · announced, upgrade now |
 
 Fibre needs glibc ≥ 2.34 (Ubuntu 24.04 is the upstream-tested OS).
 
@@ -49,4 +49,11 @@ Fibre needs glibc ≥ 2.34 (Ubuntu 24.04 is the upstream-tested OS).
 
 Installing `celestia-appd`, syncing, creating the validator, bridge nodes: follow [docs.celestia.org](https://docs.celestia.org/operate/consensus-validators/validator-node/). This repo picks up after that.
 
-<sub>Obsidian Stake · [obsidianstake.xyz](https://obsidianstake.xyz) · [GitHub](https://github.com/ObsidianStake) · Corrections welcome as issues or PRs.</sub>
+## On this repo
+
+| | |
+|:--|:--|
+| Kept by | [Obsidian Stake](https://obsidianstake.xyz), for its own validators |
+| Releases | One per celestia-app release, logged in the [release log](CHANGELOG.md) |
+| A step no longer matches upstream | Open an issue with the card number, e.g. `RB-03` |
+| License | [MIT](LICENSE) |

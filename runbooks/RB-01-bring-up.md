@@ -9,7 +9,7 @@ Starting point: a synced, bonded validator on the multiplexer build of `celestia
 ## Before
 
 ```bash
-export APP_VERSION=v10.5.0          # mocha-5: v10.5.0-mocha
+export APP_VERSION=v10.6.0          # mocha-5: v10.6.0-mocha
 export ARCH=x86_64                  # or arm64
 export FIBRE_HOME=/var/lib/celestia-fibre
 

@@ -4,12 +4,12 @@
 |:--|:--|:--|:--|
 | New `v10.x.y` release (not a new app version) | ~10 min | Medium | ~1–2 min of missed blocks |
 
-Example: `v10.4.0 → v10.5.0`. Node and Fibre come from the same release and are swapped together. A **new app version** is a different procedure (`x/signal`, multiplexer). See upstream release notes.
+Example: `v10.5.0 → v10.6.0`. Node and Fibre come from the same release and are swapped together. A **new app version** is a different procedure (`x/signal`, multiplexer). See upstream release notes.
 
 ## Before
 
 ```bash
-export NEW=v10.5.0                  # mocha-5: v10.5.0-mocha
+export NEW=v10.6.0                  # mocha-5: v10.6.0-mocha
 export ARCH=x86_64
 export FIBRE_HOME=/var/lib/celestia-fibre
 
@@ -27,7 +27,7 @@ sha256sum --ignore-missing -c checksums.txt
 tar -xzf celestia-app_Linux_$ARCH.tar.gz && tar -xzf fibre_Linux_$ARCH.tar.gz
 ```
 
-Read the release notes for config changes. v10.5.0, for example, added a `[health]` table and made object storage https-only.
+Read the release notes for config changes. v10.5.0 added a `[health]` table and made object storage https-only. v10.6.0 changed no settings. Run the `config sync` dry run anyway: when nothing is missing, it changes nothing.
 
 ## Steps
 

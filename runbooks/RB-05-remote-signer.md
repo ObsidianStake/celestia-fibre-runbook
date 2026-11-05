@@ -61,4 +61,4 @@ Set both sides back to `127.0.0.1:26669`, clear the TLS fields on both sides (al
 | Certificate name mismatch | SAN does not match the dialled address |
 | `localhost` | Use an IP literal |
 
-Upstream: [privval gRPC TLS](https://github.com/celestiaorg/celestia-core/blob/v0.42.3/docs/guides/privval-grpc-tls.md) · [Fibre signing](https://github.com/celestiaorg/celestia-app/blob/v10.5.0/fibre/cmd/README.md#signing)
+Upstream: [privval gRPC TLS](https://github.com/celestiaorg/celestia-core/blob/v0.42.8/docs/guides/privval-grpc-tls.md) · [Fibre signing](https://github.com/celestiaorg/celestia-app/blob/v10.6.0/fibre/cmd/README.md#signing)
