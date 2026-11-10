@@ -4,9 +4,18 @@ Each runbook release is tied to a celestia-app release. The tag reads `<upstream
 
 | Runbook | Upstream (mainnet / mocha-5) | Checked on | Cards touched |
 |:--|:--|:--|:--|
+| `v10.6.0-r2` | `v10.6.0` / `v10.6.0-mocha` | 2026-11-10 | README only |
 | `v10.6.0-r1` | `v10.6.0` / `v10.6.0-mocha` | 2026-11-05 | all (first cut) |
 
 ---
+
+### `v10.6.0-r2`
+
+**Mainnet upgrade announced.** The Foundation published the Mainnet Beta notice for `v10.6.0`. The Versions table now says "upgrade now" for mainnet as well. The runbook steps did not change: it is still a binary swap by [RB-03](runbooks/RB-03-minor-upgrade.md).
+
+| Card / file | Change |
+|:--|:--|
+| `README.md` | Mainnet row: "not yet announced" → "announced, upgrade now". Checked-on date updated |
 
 ### `v10.6.0-r1`
 

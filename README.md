@@ -36,11 +36,11 @@ If your layout differs, the cards still apply, but RB-04 and RB-05 stop being op
 
 ## Versions
 
-Runbook release **`v10.6.0-r1`**, checked **2026-11-05** against [celestia-app releases](https://github.com/celestiaorg/celestia-app/releases) and the upstream [Fibre server reference](https://github.com/celestiaorg/celestia-app/blob/v10.6.0/fibre/cmd/README.md). Every upstream release gets a runbook release with the same version. What changed is in the [release log](CHANGELOG.md).
+Runbook release **`v10.6.0-r2`**, checked **2026-11-10** against [celestia-app releases](https://github.com/celestiaorg/celestia-app/releases) and the upstream [Fibre server reference](https://github.com/celestiaorg/celestia-app/blob/v10.6.0/fibre/cmd/README.md). Every upstream release gets a runbook release with the same version. What changed is in the [release log](CHANGELOG.md).
 
 | Network | Chain ID | celestia-app + fibre |
 |:--|:--|:--|
-| Mainnet | `celestia` | `v10.6.0` · tagged 2026-11-05, not yet announced. Stay on `v10.5.0` until the Foundation notice |
+| Mainnet | `celestia` | `v10.6.0` · announced, upgrade now |
 | Mocha | `mocha-5` | `v10.6.0-mocha` · announced, upgrade now |
 
 Fibre needs glibc ≥ 2.34 (Ubuntu 24.04 is the upstream-tested OS).
