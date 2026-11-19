@@ -2,14 +2,14 @@
 
 | Trigger | Time | Risk | Validator downtime |
 |:--|:--|:--|:--|
-| Chain reached app version 10, or a new validator host | ~20 min | Low | One `celestia-appd` restart, only if gRPC was off |
+| Chain is on app version 10 or later, or a new validator host | ~20 min | Low | One `celestia-appd` restart, only if gRPC was off |
 
 Starting point: a synced, bonded validator on the multiplexer build of `celestia-app`. Installing the node itself is upstream's job: [docs.celestia.org](https://docs.celestia.org/operate/consensus-validators/validator-node/).
 
 ## Before
 
 ```bash
-export APP_VERSION=v10.6.0          # mocha-5: v10.6.0-mocha
+export APP_VERSION=v11.0.0          # mocha-5: v11.0.0-mocha
 export ARCH=x86_64                  # or arm64
 export FIBRE_HOME=/var/lib/celestia-fibre
 

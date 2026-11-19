@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/ObsidianStake/celestia-fibre-runbook/main/media/title.svg?v=1" width="55%" alt="Celestia + Fibre">
 
-**This is not an install guide.** It starts where those end: a synced, bonded Celestia validator on app version 10, and a Fibre server to run next to it. It is the runbook from our own [Mocha validator](https://celestia-dashboard.krews.xyz/celestia-mocha/validators/celestiavaloper17awy8avky6rmnxketpf46dywegd86sla44vx24), written down so the next person on call does not have to remember it.
+**This is not an install guide.** It starts where those end: a synced, bonded Celestia validator on app version 10 or later, and a Fibre server to run next to it. It is the runbook from our own [Mocha validator](https://celestia-dashboard.krews.xyz/celestia-mocha/validators/celestiavaloper17awy8avky6rmnxketpf46dywegd86sla44vx24), written down so the next person on call does not have to remember it.
 
 ## What do you need right now?
 
@@ -8,7 +8,8 @@
 |:--|:--|
 | The chain is on v10 and Fibre is not running yet | [RB-01 · Bring Fibre up](runbooks/RB-01-bring-up.md) |
 | Fibre runs, but clients can't find it | [RB-02 · Register or move the host](runbooks/RB-02-register-host.md) |
-| A new `v10.x.y` release is out | [RB-03 · Minor upgrade](runbooks/RB-03-minor-upgrade.md) |
+| A new release is out, same app version | [RB-03 · Minor upgrade](runbooks/RB-03-minor-upgrade.md) |
+| A release brings a **new app version** (e.g. v11) | [RB-07 · Install, signal, activate](runbooks/RB-07-new-app-version.md) |
 | The Fibre disk is filling up | [RB-04 · Object storage](runbooks/RB-04-object-storage.md) |
 | The key is moving to a KMS or another host | [RB-05 · Remote signer, mTLS](runbooks/RB-05-remote-signer.md) |
 | **An alert says Fibre is not ready** | [RB-06 · Not ready](runbooks/RB-06-not-ready.md) |
@@ -20,7 +21,7 @@ Every runbook card has the same shape: **trigger · time · risk · downtime**, 
 | Drawer | What's in it | Read it |
 |:--|:--|:--|
 | [`anatomy/`](anatomy/how-fibre-works.md) | How one upload travels through your host, what "ready" means | Once, before anything else |
-| [`runbooks/`](runbooks) | RB-01 … RB-06 | When the situation comes up |
+| [`runbooks/`](runbooks) | RB-01 … RB-07 | When the situation comes up |
 | [`reference/`](reference) | [Ports and config](reference/ports-and-config.md) · [alert → card](reference/signals.md) | When you need a value |
 
 Plus [`systemd/celestia-fibre.service`](systemd/celestia-fibre.service).
@@ -36,14 +37,14 @@ If your layout differs, the cards still apply, but RB-04 and RB-05 stop being op
 
 ## Versions
 
-Runbook release **`v10.6.0-r2`**, checked **2026-11-10** against [celestia-app releases](https://github.com/celestiaorg/celestia-app/releases) and the upstream [Fibre server reference](https://github.com/celestiaorg/celestia-app/blob/v10.6.0/fibre/cmd/README.md). Every upstream release gets a runbook release with the same version. What changed is in the [release log](CHANGELOG.md).
+Runbook release **`v11.0.0-r1`**, checked **2026-11-19** against [celestia-app releases](https://github.com/celestiaorg/celestia-app/releases) and the upstream [Fibre server reference](https://github.com/celestiaorg/celestia-app/blob/v11.0.0/fibre/cmd/README.md). Every upstream release gets a runbook release with the same version. What changed is in the [release log](CHANGELOG.md).
 
 | Network | Chain ID | celestia-app + fibre |
 |:--|:--|:--|
-| Mainnet | `celestia` | `v10.6.0` · announced, upgrade now |
-| Mocha | `mocha-5` | `v10.6.0-mocha` · announced, upgrade now |
+| Mainnet | `celestia` | `v11.0.0` · app version 11, install now and signal `11` ([RB-07](runbooks/RB-07-new-app-version.md)). Activates 232,616 blocks after `try-upgrade` |
+| Mocha | `mocha-5` | `v11.0.0-mocha` · app version 11, active since 2026-11-19 |
 
-Fibre needs glibc ≥ 2.34 (Ubuntu 24.04 is the upstream-tested OS).
+Fibre needs glibc ≥ 2.34 (Ubuntu 24.04 is the upstream-tested OS). Bridge and light nodes need celestia-node `v0.36.0` / `v0.36.0-mocha` before v11 activates.
 
 ## Out of scope
 

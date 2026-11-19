@@ -4,10 +4,24 @@ Each runbook release is tied to a celestia-app release. The tag reads `<upstream
 
 | Runbook | Upstream (mainnet / mocha-5) | Checked on | Cards touched |
 |:--|:--|:--|:--|
+| `v11.0.0-r1` | `v11.0.0` / `v11.0.0-mocha` | 2026-11-19 | new RB-07, README, RB-01, RB-03, links |
 | `v10.6.0-r2` | `v10.6.0` / `v10.6.0-mocha` | 2026-11-10 | README only |
 | `v10.6.0-r1` | `v10.6.0` / `v10.6.0-mocha` | 2026-11-05 | all (first cut) |
 
 ---
+
+### `v11.0.0-r1`
+
+**App version 11.** celestia-app `v11.0.0` is an emergency release cut from v10.x. It restricts accounts whose keys were exposed in the Keplr/Web3Auth social-login incident, so they can only send funds to a recovery address. Unlike v10.5 and v10.6, it is a **coordinated upgrade**: install, signal `11`, `try-upgrade`, and the switch comes 232,616 blocks later on mainnet. On Mocha it activated on 2026-11-19. For Fibre: no new settings, flags or ports.
+
+| Card / file | Change |
+|:--|:--|
+| **RB-07** (new) | Install, signal, `try-upgrade`, watch the tally, verify after activation, and what can still be rolled back at each stage |
+| `README.md` | Versions → `v11.0.0` / `v11.0.0-mocha`. New "new app version" row in the situation table. Bridge/light nodes need celestia-node `v0.36.0` before activation |
+| RB-01 | `APP_VERSION` → `v11.0.0`. Trigger reads "app version 10 or later" |
+| RB-03 | Points to RB-07 for new app versions |
+| `reference/signals.md` | New alert: "Upgrade scheduled". "New release" routes to RB-03 or RB-07 |
+| RB-04, RB-05, `reference/signals.md` | Upstream links → `v11.0.0` |
 
 ### `v10.6.0-r2`
 

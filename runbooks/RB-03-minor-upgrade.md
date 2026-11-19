@@ -4,7 +4,7 @@
 |:--|:--|:--|:--|
 | New `v10.x.y` release (not a new app version) | ~10 min | Medium | ~1–2 min of missed blocks |
 
-Example: `v10.5.0 → v10.6.0`. Node and Fibre come from the same release and are swapped together. A **new app version** is a different procedure (`x/signal`, multiplexer). See upstream release notes.
+Example: `v10.5.0 → v10.6.0`. Node and Fibre come from the same release and are swapped together. A **new app version** (such as v11.0.0) is a different procedure: [RB-07](RB-07-new-app-version.md).
 
 ## Before
 
